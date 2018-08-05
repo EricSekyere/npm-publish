@@ -1,5 +1,5 @@
 'use strict';
-const math = require("./src/index");
+const math = require("./index");
 
 describe("Math Suite Addition", ()=> {
     test("it returns 0 with no input", ()=>{
@@ -57,7 +57,7 @@ describe("Math Suite Multiplication", () => {
         function testMultiplyError() {
             math.multiply("1", 2);
         }
-        expect(testMultiplyError).toThrowErrorMatchingSnapshot();
+        expect(testMultiplyError).toThrow();
     });
 
     test("it throws an error for non numeric values", () => {
