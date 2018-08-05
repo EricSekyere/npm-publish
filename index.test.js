@@ -1,5 +1,5 @@
 'use strict';
-const math = require("./index");
+const math = require("./src/index");
 
 describe("Math Suite Addition", ()=> {
     test("it returns 0 with no input", ()=>{
