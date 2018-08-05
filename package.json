@@ -8,7 +8,9 @@
     "start": "node index.js"
   },
   "keywords": [
-    "Math"
+    "Math",
+    "NodeJS",
+    "JavaScript"
   ],
   "author": "Eric Sekyere",
   "license": "MIT"

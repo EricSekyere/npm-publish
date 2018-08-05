@@ -3,7 +3,7 @@
 > ${DESCRIPTION}
 
 [![NPM Version][npm-image]][https://www.npmjs.com/package/custom-simple-math]
-[![Linux Build][travis-image]][travis-url]
+[![Linux Build][travis-image]][https://travis-ci.org/EricSekyere/npm-publish/builds]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
 ## Install
@@ -14,7 +14,16 @@ npm i -S custom-simple-math
 
 ## Usage
 
-TODO
+```javascript
+const math = require('custom-simple-math');
+
+let multNums = math.multiply(1,2,3,4,5);
+console.log(multNums);
+
+let addNums = math.add(1,2,3,4,5);
+console.log(addNums);
+
+```
 
 ## License
 
