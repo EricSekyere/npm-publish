@@ -7,11 +7,11 @@ function flatten(arr) {
 
 let SimpleMath = { };
     /**
-     * @param {x, y} numbers to multiply
+     * @param  numbers to multiply
      * 
      * @return {number} return computed number.
      */
-SimpleMath.add =  function(x,y){
+SimpleMath.add =  function(){
         let total = 0;
         for (const key in flatten(Object.values(arguments))) {
             if (typeof arguments[key] !== "number") {
@@ -22,11 +22,11 @@ SimpleMath.add =  function(x,y){
         return total;
 };
     /**
-     * @param {x, y} numbers to multiply. More than two argument canbe provided, comma separated
+     * @param  numbers to multiply. More than two argument canbe provided, comma separated
      * 
      * @return {number} return computed number.
      */
-SimpleMath.multiply = function (x, y) {
+SimpleMath.multiply = function () {
        let total = 1;
        for (const key in flatten(Object.values(arguments))) {
             if (typeof arguments[key] !== "number") {

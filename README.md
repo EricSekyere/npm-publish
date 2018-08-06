@@ -1,13 +1,13 @@
-# live-xxx
+# Custom-Simple-Math
 
-> ${DESCRIPTION}
+> A simple math library
 
 [![NPM Version][npm-image]][https://www.npmjs.com/package/custom-simple-math]
 [![Linux Build][travis-image]][https://travis-ci.org/EricSekyere/npm-publish/builds]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
 ## Install
-
+Using npm :
 ```bash
 npm i -S custom-simple-math
 ```
