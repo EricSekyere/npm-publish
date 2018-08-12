@@ -21,6 +21,9 @@
     "type": "git",
     "url": "https://github.com/EricSekyere/npm-publish"
   },
+  "bugs": {
+    "url": "https://github.com/EricSekyere/npm-publish/issues"
+  },
   "keywords": [
     "Math",
     "NodeJS",
