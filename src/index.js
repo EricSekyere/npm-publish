@@ -1,9 +1,7 @@
 "use strict" 
 
-function flatten(arr) {
-    return Array.prototype.concat.apply([], arr);
-}
-
+const scripts = require("./utils/scripts");
+const errorHandlers = require("./utils/errhandlers");
 
 let SimpleMath = { };
     /**
@@ -13,9 +11,9 @@ let SimpleMath = { };
      */
 SimpleMath.add =  function(){
         let total = 0;
-        for (const key in flatten(Object.values(arguments))) {
-            if (typeof arguments[key] !== "number") {
-                throw new Error("Only numbers are allowed");
+        for (const key in scripts.flatten(Object.values(arguments))) {
+            if (!scripts.checkType(arguments[key], "number")) {
+                throw errorHandlers.customError("Only numbers are allowed");
             } 
             total += arguments[key];
         }
@@ -28,13 +26,17 @@ SimpleMath.add =  function(){
      */
 SimpleMath.multiply = function () {
        let total = 1;
-       for (const key in flatten(Object.values(arguments))) {
-            if (typeof arguments[key] !== "number") {
-                throw new Error("Only numbers are allowed");
+       for (const key in scripts.flatten(Object.values(arguments))) {
+            if (!scripts.checkType(arguments[key], "number")) {
+               throw  errorHandlers.customError("Only numbers are allowed");
             }
             total *= arguments[key];
         }
         return total;
 };
 
+SimpleMath.subtract = function (x, y){
+    if(typeof x !== "number" )
+    return x - y
+}
 module.exports = SimpleMath;
