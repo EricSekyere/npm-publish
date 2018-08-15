@@ -15,5 +15,5 @@ notifications:
   email: true
 
 script:
-  - npm validate
-  - npm security
+  - npm run validate
+  - npm run security
