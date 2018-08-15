@@ -16,4 +16,4 @@ notifications:
 
 script:
   - npm run validate
-  - npm run security
+

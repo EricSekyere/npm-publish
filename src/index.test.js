@@ -23,7 +23,7 @@ describe("Math Suite Addition", ()=> {
         function testAddError(){
             math.add("1", 2);
         }
-        expect(testAddError).toThrowErrorMatchingSnapshot();
+        expect(testAddError).toThrow();
     });
 
     test("it throws an error for non numeric values", () => {
