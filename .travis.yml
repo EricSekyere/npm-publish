@@ -12,7 +12,7 @@ branches:
     - master
 
 notifications:
-  email: false
+  email: true
 
 script:
   - npm validate
