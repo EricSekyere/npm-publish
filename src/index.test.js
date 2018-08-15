@@ -68,3 +68,34 @@ describe("Math Suite Multiplication", () => {
         expect(testMultiplyError).toThrow();
     });
 });
+
+describe("Math Suite Subtraction", () => {
+
+  test("it returns a negative number  for large subtractions", () => {
+    expect(math.subtract(1, 2)).toBe(-1);
+  });
+
+  test("it subtracts two numbers", () => {
+    expect(math.subtract(9, 7)).toBe(2);
+  });
+
+  test("it subtracts two numbers", () => {
+    expect(math.subtract(5, -7)).toBe(12);
+  });
+
+  test("it throws an error for strings", () => {
+    //wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
+    function testSubtractError() {
+      math.subtract("1", 2);
+    }
+    expect(testSubtractError).toThrow();
+  });
+
+  test("it throws an error for non numeric values", () => {
+    //wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
+    function testSubtractError() {
+      math.subtract(2, false);
+    }
+    expect(testSubtractError).toThrow();
+  });
+});
