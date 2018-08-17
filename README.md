@@ -23,6 +23,8 @@ console.log(multNums);
 let addNums = math.add(1,2,3,4,5);
 console.log(addNums);
 
+let subNums = math.subtract(5 , 7);
+console.log(subNums);
 ```
 
 ## License
