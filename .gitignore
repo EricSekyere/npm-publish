@@ -3,3 +3,4 @@ coverage/*
 src/__snapshots__/*
 dist
 *.tgz
+.env
