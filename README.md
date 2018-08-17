@@ -2,9 +2,7 @@
 
 > A simple math library
 
-[![NPM Version][npm-image]][https://www.npmjs.com/package/custom-simple-math]
-[![Linux Build][travis-image]][https://travis-ci.org/EricSekyere/npm-publish.svg?branch=master]
-[![Test Coverage][coveralls-image]][coveralls-url]
+[![Build Status](https://travis-ci.org/EricSekyere/npm-publish.svg?branch=master)](https://travis-ci.org/EricSekyere/npm-publish)
 
 ## Install
 Using npm :
