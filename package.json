@@ -12,7 +12,7 @@
     "validate": "npm-run-all --parallel lint test build",
     "synk-auth": "snyk auth",
     "snyk-test": "snyk test",
-    "security": "npm-run-all synk-auth snyk-test"
+    "security": "npm run synk-auth && npm run snyk-test"
   },
   "files": [
     "dist"
