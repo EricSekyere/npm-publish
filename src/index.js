@@ -52,4 +52,19 @@ SimpleMath.subtract = function (x, y){
 }
 
 
+/**
+ * @param  {x} first number for expression
+ * @param  {y} second number to divide with the first
+ * @return {number} return computed number.
+ */
+SimpleMath.divide = function (x, y) {
+    if (!scripts.checkType(x, "number") || !scripts.checkType(y, "number")) {
+        throw errorHandlers.customError("Only numbers are allowed");
+    }
+    if(y == 0){
+        throw errorHandlers.customError("Error: Cannot divide by 0");
+    }
+    return x / y;
+}
+
 module.exports = SimpleMath;

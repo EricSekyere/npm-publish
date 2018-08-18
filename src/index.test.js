@@ -99,3 +99,62 @@ describe("Math Suite Subtraction", () => {
     expect(testSubtractError).toThrow();
   });
 });
+
+
+describe("Math Suite Divison", () => {
+
+    test("it returns a negative value for a single negative denominator", () => {
+    expect(math.divide(4, -2)).toBe(-2);
+    });
+
+    test("it returns a negative value for a single negative numerator", () => {
+      expect(math.divide(-4, 2)).toBe(-2);
+    });
+
+    test("it returns a positive value for a negative denominator and a negative numerator", () => {
+      expect(math.divide(-4, -2)).toBe(2);
+    });
+
+    test("it divides two numbers", () => {
+        expect(math.divide(14, 7)).toBe(2);
+    });
+
+    test("it should return decimals for larger divisors", () => {
+        expect(math.divide(7, 14)).toBe(0.5);
+        expect(math.divide(3, 14)).toBe(3/14);
+        expect(math.divide(5, 35)).toBe(5/35);   
+    });
+
+    test("it should return decimals uneven divisions", () => {
+      expect(math.divide(5, 3)).toBe(5/3);
+      expect(math.divide(15,33)).toBe(15/33);
+    });
+
+    test("it subtracts two numbers", () => {
+        expect(math.subtract(5, -7)).toBe(12);
+    });
+
+    test("it throws an error for 0 disivions", () => {
+      //wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
+      function testDivideError() {
+        math.divide(4, 0);
+      }
+      expect(testDivideError).toThrow();
+    });
+
+    test("it throws an error for strings", () => {
+        //wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
+        function testDivideError() {
+            math.divide("1", 2);
+        }
+        expect(testDivideError).toThrow();
+    });
+
+    test("it throws an error for non numeric values", () => {
+        //wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
+        function testDivideError() {
+        math.divide(2, false);
+        }
+        expect(testDivideError).toThrow();
+    });
+});
