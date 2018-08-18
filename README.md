@@ -25,6 +25,12 @@ console.log(addNums);
 
 let subNums = math.subtract(5 , 7);
 console.log(subNums);
+
+let divNums = math.divide(5 , -7);
+console.log(divNums);
+
+let divNums2 = math.divide(-14 , -7);
+console.log(divNums2);
 ```
 
 ## License

@@ -1,6 +1,6 @@
 {
   "name": "custom-simple-math",
-  "version": "1.6.0",
+  "version": "1.9.0",
   "description": "A simple math operation functions npm test",
   "main": "dist/index.js",
   "scripts": {

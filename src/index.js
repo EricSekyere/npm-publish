@@ -67,4 +67,26 @@ SimpleMath.divide = function (x, y) {
     return x / y;
 }
 
+
+/**
+ * @param  numbers to compute average of. More than two argument canbe provided, comma separated
+ * 
+ * @return {number} return computed number.
+ */
+
+SimpleMath.average = function () {
+  let total = 0;
+  if (arguments.length < 1)
+  {
+      return total;
+  }
+  for (const key in scripts.flatten(Object.values(arguments))) {
+    if (!scripts.checkType(arguments[key], "number")) {
+      throw errorHandlers.customError("Only numbers are allowed");
+    }
+    total *= arguments[key];
+  }
+  return total / arguments.length;
+};
+
 module.exports = SimpleMath;
