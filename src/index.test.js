@@ -130,10 +130,6 @@ describe("Math Suite Divison", () => {
       expect(math.divide(15,33)).toBe(15/33);
     });
 
-    test("it subtracts two numbers", () => {
-        expect(math.subtract(5, -7)).toBe(12);
-    });
-
     test("it throws an error for 0 disivions", () => {
       //wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
       function testDivideError() {
@@ -157,4 +153,73 @@ describe("Math Suite Divison", () => {
         }
         expect(testDivideError).toThrow();
     });
+});
+
+
+
+
+describe("Math Suite Average", () => {
+
+  test("it returns 0 for not arguments", () => {
+    expect(math.average()).toBe(0);
+  });
+
+  test("it returns the same number for single arguments", () => {
+    expect(math.average(5)).toBe(5);
+    expect(math.average(-4)).toBe(-4);
+  });
+
+  test("it returns the the average for a number of argumets", () => {
+    expect(math.average(-4, 6, 10)).toBe(4);
+    expect(math.average( 6, 10)).toBe(8);
+    expect(math.average(5, 10)).toBe(7.5);
+  });
+
+  test("it throws an error for strings", () => {
+    //wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
+    function testAverageError() {
+      math.average("1", 2);
+    }
+    expect(testAverageError).toThrow();
+  });
+
+  test("it throws an error for non numeric values", () => {
+    //wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
+    function testAverageError() {
+      math.average(2, false);
+    }
+    expect(testAverageError).toThrow();
+  });
+});
+
+
+describe("Math Suite isEven", () => {
+
+  test("it returns true for even numbers", () => {
+    expect(math.isEven(4)).toBe(true);
+    expect(math.isEven(100)).toBe(true);
+    expect(math.isEven(3000)).toBe(true);
+  });
+
+  test("it returns false for even numbers", () => {
+    expect(math.isEven(9)).toBe(false);
+    expect(math.isEven(1035)).toBe(false);
+    expect(math.isEven(2037)).toBe(false);
+  });
+
+  test("it throws an error for strings", () => {
+    //wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
+    function testisEvenError() {
+      math.isEven("1");
+    }
+    expect(testisEvenError).toThrow();
+  });
+
+  test("it throws an error for non numeric values", () => {
+    //wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
+    function testisEvenError() {
+      math.isEven(false);
+    }
+    expect(testisEvenError).toThrow();
+  });
 });

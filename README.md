@@ -31,6 +31,12 @@ console.log(divNums);
 
 let divNums2 = math.divide(-14 , -7);
 console.log(divNums2);
+
+let avg = math.average(14, 25, 30, 5, 10);
+console.log(avg);
+
+let isEvenNum = math.average(14);
+console.log(isEvenNum);
 ```
 
 ## License

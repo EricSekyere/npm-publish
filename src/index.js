@@ -75,18 +75,30 @@ SimpleMath.divide = function (x, y) {
  */
 
 SimpleMath.average = function () {
-  let total = 0;
   if (arguments.length < 1)
-  {
-      return total;
-  }
   for (const key in scripts.flatten(Object.values(arguments))) {
-    if (!scripts.checkType(arguments[key], "number")) {
-      throw errorHandlers.customError("Only numbers are allowed");
+       for (const key in scripts.flatten(Object.values(arguments))) {
+         if (!scripts.checkType(arguments[key], "number")) {
+           throw errorHandlers.customError("Only numbers are allowed");
+         }
+         total += arguments[key];
+       }
+       return total/ argsLength;
+};
+
+
+/**
+ * @param  {x} value to check
+ * 
+ * @return {boolean} return true or false if number is even.
+ */
+
+SimpleMath.isEven = function (x) {
+   if (!scripts.checkType(x, "number")) {
+        throw errorHandlers.customError("Only numbers are allowed");
     }
-    total *= arguments[key];
-  }
-  return total / arguments.length;
+    return x % 2 == 0;
+
 };
 
 module.exports = SimpleMath;
