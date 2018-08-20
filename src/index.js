@@ -75,8 +75,8 @@ SimpleMath.divide = function (x, y) {
  */
 
 SimpleMath.average = function () {
-  if (arguments.length < 1)
-  for (const key in scripts.flatten(Object.values(arguments))) {
+       let argsLength = arguments.length > 0 ? arguments.length: 1;
+       let total = 0;
        for (const key in scripts.flatten(Object.values(arguments))) {
          if (!scripts.checkType(arguments[key], "number")) {
            throw errorHandlers.customError("Only numbers are allowed");
