@@ -35,7 +35,7 @@ console.log(divNums2);
 let avg = math.average(14, 25, 30, 5, 10);
 console.log(avg);
 
-let isEvenNum = math.average(14);
+let isEvenNum = math.isEven(14);
 console.log(isEvenNum);
 ```
 
