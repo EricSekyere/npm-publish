@@ -69,7 +69,7 @@ SimpleMath.divide = function (x, y) {
 
 
 /**
- * @param  numbers to compute average of. More than two argument canbe provided, comma separated
+ * @param  numbers to compute average of. More than two argument can be provided, comma separated
  * 
  * @return {number} return computed number.
  */

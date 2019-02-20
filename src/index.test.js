@@ -201,7 +201,7 @@ describe("Math Suite isEven", () => {
     expect(math.isEven(3000)).toBe(true);
   });
 
-  test("it returns false for even numbers", () => {
+  test("it returns false for non-even numbers", () => {
     expect(math.isEven(9)).toBe(false);
     expect(math.isEven(1035)).toBe(false);
     expect(math.isEven(2037)).toBe(false);
