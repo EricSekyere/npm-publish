@@ -2,7 +2,7 @@
 
 > A simple math library
 
-[![Build Status](https://travis-ci.org/EricSekyere/npm-publish.svg?branch=master)](https://travis-ci.org/EricSekyere/npm-publish)
+[![Build Status](https://travis-ci.org/EricSekyere/Custom-Simple-Math.svg?branch=master)](https://travis-ci.org/EricSekyere/Custom-Simple-Math)
 [![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
 [![Known Vulnerabilities](https://snyk.io/test/github/EricSekyere/npm-publish/badge.svg)](https://snyk.io/test/github/EricSekyere/npm-publish)
 
