@@ -1,6 +1,6 @@
 {
-  "name": "custom-simple-math",
-  "version": "1.10.2",
+  "name": "csmath",
+  "version": "1.11.2",
   "description": "A simple math operation functions npm test",
   "main": "dist/index.js",
   "scripts": {
